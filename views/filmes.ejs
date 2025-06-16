@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+<h2>Lista de Filmes</h2>
+<a href="/filmes/novo">Adicionar Novo Filme</a>
+<table>
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Diretor</th>
+            <th>Ano</th>
+            <th>Gênero</th>
+            <th>Já Assistiu?</th>
+            <th>Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% filmes.forEach(filme => { %>
+            <tr>
+                <td><%= filme.titulo %></td>
+                <td><%= filme.diretor %></td>
+                <td><%= filme.ano %></td>
+                <td><%= filme.genero %></td>
+                <td><%= filme.assistiu %></td>
+                <td>
+                    <a href="/filmes/<%= filme.id %>/edit">Editar</a>
+                    <form method="POST" action="/filmes/<%= filme.id %>?_method=DELETE" style="display:inline">
+                        <button type="submit">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+<%- include('partials/footer') %>

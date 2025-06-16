@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+<h2 style="text-align:center"><%= filme.id ? 'Editar Filme' : 'Novo Filme' %></h2>
+<form action="<%= action %>" method="POST">
+    <label for="titulo">Título:</label>
+    <input type="text" name="titulo" value="<%= filme.titulo || '' %>" placeholder="Vingadores: Ultimato" required><br>
+
+    <label for="diretor">Diretor:</label>
+    <input type="text" name="diretor" value="<%= filme.diretor || '' %>" placeholder="Anthony Russo, Joe Russo"><br>
+
+    <label for="ano">Ano:</label>
+    <input type="date" name="ano" value="<%= filme.ano || '' %>"><br>
+
+    <label for="genero">Gênero:</label>
+    <input type="text" name="genero" value="<%= filme.genero || '' %>" placeholder="Ação/Ficção científica"><br>
+
+    <label for="assistiu">Já Assistiu?</label>
+    <input type="text" name="assistiu" value="<%= filme.assistiu || '' %>" placeholder="Sim" required><br>
+
+    <button type="submit">Salvar</button>
+</form>
+<%- include('partials/footer') %>
