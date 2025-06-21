@@ -12,6 +12,14 @@ header, footer {
     text-align: center;
 }
 
+header h1 a {
+    font-size: 34px;
+}
+
+header h1 a:hover {
+    background: transparent;
+}
+
 nav {
     padding: 15px;
 }
@@ -60,6 +68,15 @@ table, th, td {
     text-align: center;
 }
 
+th {
+    background: #ff2b2b;
+    color: white;
+}
+
+th {
+    margin: 2px;
+}
+
 input {
     border-radius: 5px;
     border: 1px solid black;
@@ -68,8 +85,6 @@ input {
     margin: 10px;
     width: 250px;
 }
-
-
 
 footer a {
     padding: 0px 0px;
